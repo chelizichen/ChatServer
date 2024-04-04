@@ -1,0 +1,7 @@
+server:
+  name: ChatServer
+  port: 8520
+  type: http
+  staticPath: dist # 静态资源
+  storage: root:123456@tcp(127.0.0.1:3306)/stockpool # 存储
+  main: false
