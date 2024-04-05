@@ -1,19 +1,32 @@
 // ChatRoomSelection.js
 
 import { Link } from 'react-router-dom';
-import { Button } from 'antd';
+import { List } from 'antd';
 
 const RoomView = () => {
+  const room = [
+    {
+      path:"/chatroom/1",
+      name:"ChatRoom1",
+    },
+    {
+      path:"/chatroom/2",
+      name:"ChatRoom2",
+    },
+  ]
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <h2>Choose a Chat Room:</h2>
-      <Button type="primary" style={{ marginBottom: '20px' }}>
-        <Link to="/chatroom/1">Chat Room 1</Link>
-      </Button>
-      <Button type="primary">
-        <Link to="/chatroom/2">Chat Room 2</Link>
-      </Button>
-      {/* Add more chat rooms as needed */}
+      <List
+              bordered
+              dataSource={room}
+              renderItem={(msg) => <List.Item>
+                    <Link to={msg.path}>{msg.name}</Link>
+              </List.Item>}
+              style={{ width:'90vw',margin:"0 5vw 20px 5vw" }}
+      >
+        
+      </List>
     </div>
   );
 };

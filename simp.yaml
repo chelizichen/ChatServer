@@ -5,3 +5,6 @@ server:
   staticPath: dist # 静态资源
   storage: root:123456@tcp(127.0.0.1:3306)/stockpool # 存储
   main: false
+  mapConf: 
+    redis-addr: '127.0.0.1:6379'
+    redis-pass: ''
