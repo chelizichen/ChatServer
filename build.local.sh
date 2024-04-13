@@ -5,10 +5,10 @@
 readonly ServerName="ChatServer"
 readonly SgridFile="sgrid_app"
 # rm
-rm ./$ServerName.tar.gz ./SgridFile
+rm ./$ServerName.tar.gz ./$SgridFile
 
 # compile
 go build -o $SgridFile
 
 # build
-tar -cvf $ServerName.tar.gz ./sgrid.yaml ./$SgridFile
+tar -cvf $ServerName.tar.gz ./sgrid.yml ./$SgridFile dist
