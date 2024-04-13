@@ -7,3 +7,5 @@ dist
 app/node_modules
 app/.env.production
 
+sgrid_app
+
