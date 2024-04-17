@@ -1,8 +1,9 @@
 server:
   name: ChatServer
   port: 8520
-  staticPath: dist # 静态资源
-  storage: root:123456@tcp(127.0.0.1:3306)/stockpool # 存储
-  mapConf: 
-    redis-addr: '127.0.0.1:6379'
-    redis-pass: ''
+  host: 150.158.120.244
+  protocol: grpc
+  language: go
+config: 
+  redis-addr: 127.0.0.1:6379
+  redis-pass: ''
